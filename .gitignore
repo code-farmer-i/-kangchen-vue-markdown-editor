@@ -1,0 +1,8 @@
+dist
+.DS_Store
+node_modules
+*.log
+.idea
+.eslintcache
+*.tsbuildinfo
+*.tgz

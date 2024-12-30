@@ -1,0 +1,11 @@
+{
+  "name": "@vokit-editor/vue-toolbars",
+  "dependencies": {
+    "@vokit-editor/core": "workspace:*",
+    "@vokit-editor/vue": "workspace:*",
+    "@vokit-editor/commands": "workspace:*"
+  },
+  "devDependencies": {
+    "vue": "^3.5.12"
+  }
+}

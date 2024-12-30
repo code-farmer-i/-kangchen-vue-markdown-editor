@@ -1,0 +1,24 @@
+// zoom-in
+.vokit-editor-zoom-in-top-enter-active,
+.vokit-editor-zoom-in-top-leave-active {
+  transform: scaleY(1);
+  opacity: 1;
+  transition:
+    transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.vokit-editor-zoom-in-top-enter-from,
+.vokit-editor-zoom-in-top-leave-active {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+// fade-in
+.vokit-editor-fade-in-enter-active,
+.vokit-editor-fade-in-leave-active {
+  transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.vokit-editor-fade-in-enter-from,
+.vokit-editor-fade-in-leave-active {
+  opacity: 0;
+}

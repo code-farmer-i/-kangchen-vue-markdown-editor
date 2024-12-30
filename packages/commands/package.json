@@ -1,0 +1,7 @@
+{
+  "name": "@vokit-editor/commands",
+  "dependencies": {
+    "@vokit-editor/core": "workspace:*",
+    "@vokit-editor/shared": "workspace:*"
+  }
+}

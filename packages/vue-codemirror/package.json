@@ -1,0 +1,12 @@
+{
+  "name": "@vokit-editor/vue-codemirror",
+  "dependencies": {
+    "@vokit-editor/vue": "workspace:*",
+    "@vokit-editor/shared": "workspace:*",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/view": "^6.35.0"
+  },
+  "devDependencies": {
+    "vue": "^3.5.12"
+  }
+}

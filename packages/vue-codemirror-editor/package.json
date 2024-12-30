@@ -1,0 +1,19 @@
+{
+  "name": "@vokit-editor/vue-codemirror-editor",
+  "dependencies": {
+    "@vokit-editor/core": "workspace:*",
+    "@vokit-editor/vue": "workspace:*",
+    "@vokit-editor/commands": "workspace:*",
+    "@vokit-editor/vue-codemirror": "workspace:*",
+    "@codemirror/lang-markdown": "^6.3.1",
+    "@codemirror/language-data": "^6.5.1",
+    "@codemirror/view": "^6.35.0",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/language": "^6.10.5",
+    "@uiw/codemirror-theme-vscode": "^4.23.6",
+    "@uiw/codemirror-theme-github": "^4.23.6"
+  },
+  "devDependencies": {
+    "vue": "^3.5.12"
+  }
+}

@@ -1,0 +1,154 @@
+.vokit-editor {
+  &__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border-bottom: 1px solid var(--ve-border-color);
+
+    &-left,
+    &-right {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-left + &-right {
+      margin-left: 60px;
+    }
+
+    &-divider {
+      position: relative;
+      height: 28px;
+      margin: 0 10px;
+
+      + li.vokit-editor__toolbar-item {
+        margin-left: 0;
+      }
+
+      &::before {
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        border-left: 1px solid var(--ve-border-color);
+        content: '';
+      }
+    }
+  }
+
+  &__toolbar-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: var(--ve-toolbar-item-height);
+    padding: 0 6px;
+    color: var(--ve-toolbar-item-text-color);
+    font-size: var(--ve-toolbar-item-font-size);
+    line-height: var(--ve-toolbar-item-height);
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s linear 0s;
+
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+
+    &:hover {
+      background: var(--ve-toolbar-item-hover-bg-color);
+    }
+
+    &--menu {
+      padding-right: 0;
+
+      .vokit-editor__menu-ctrl {
+        display: inline-block;
+      }
+    }
+
+    &--active {
+      background: var(--ve-toolbar-item-active-bg-color);
+
+      &:hover {
+        background: var(--ve-toolbar-item-active-bg-color);
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    z-index: var(--ve-tooltip-z-index);
+    padding: var(--ve-tooltip-padding);
+    color: var(--ve-tooltip-text-color);
+    font-size: var(--ve-tooltip-font-size);
+    line-height: 1;
+    white-space: nowrap;
+    background-color: var(--ve-tooltip-bg-color);
+    border-radius: var(--ve-tooltip-border-radius);
+    box-shadow: var(--ve-tooltip-box-shadow);
+  }
+
+  &__menu {
+    position: absolute;
+    top: 38px;
+    z-index: 99;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: var(--ve-box-shadow);
+    transform-origin: center top;
+
+    &-item {
+      color: var(--ve-toolbar-text-color);
+      font-weight: normal;
+      font-size: var(--ve-toolbar-menu-font-size);
+      white-space: nowrap;
+      list-style: none;
+
+      &:hover {
+        background-color: var(--ve-toolbar-item-hover-bg-color);
+      }
+    }
+
+    &--list {
+      padding: 5px 0;
+
+      .vokit-editor__menu-item {
+        padding: 0 24px;
+        line-height: 34px;
+        text-align: left;
+      }
+    }
+
+    &--panel {
+      max-height: 200px;
+      padding: 12px 10px;
+      overflow-y: auto;
+
+      .vokit-editor__menu-row {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &:not(:last-child) {
+          margin-bottom: 6px;
+        }
+      }
+
+      .vokit-editor__menu-item {
+        display: inline-block;
+        padding: 8px 0;
+        line-height: 1;
+        text-align: center;
+        border-radius: 2px;
+
+        &:not(:last-child) {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

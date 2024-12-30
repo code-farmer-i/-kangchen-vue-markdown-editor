@@ -1,0 +1,5 @@
+# 忽略文件或目录:
+node_modules
+.idea
+dist
+**/*.md

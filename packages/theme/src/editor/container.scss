@@ -1,0 +1,97 @@
+.vokit-editor {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: var(--ve-box-shadow);
+
+  &__left-area,
+  &__right-area {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+
+  &__left-area {
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid var(--ve-border-color);
+    transition: 0.3s;
+
+    &-title {
+      position: relative;
+      height: 41px;
+      padding: 0 14px;
+      color: var(--ve-text-color);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 41px;
+      white-space: nowrap;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid var(--ve-border-color);
+        content: '';
+      }
+    }
+
+    &-body {
+      flex: 1;
+      padding: 8px 14px;
+      overflow: hidden;
+    }
+  }
+
+  &--left-area-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--left-area-reverse &__left-area {
+    border-right: none;
+    border-left: 1px solid var(--ve-border-color);
+  }
+
+  &__right-area {
+    flex: 1;
+  }
+
+  &--preview {
+    box-shadow: none;
+  }
+
+  &--fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  &__main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__editor-wrapper,
+  &__preview-wrapper {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__editor-wrapper {
+    cursor: text;
+    user-select: none;
+  }
+
+  &--editable &__editor-wrapper {
+    border-right: 1px solid var(--ve-border-color);
+  }
+}

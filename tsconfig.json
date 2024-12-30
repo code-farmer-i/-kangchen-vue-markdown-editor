@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@vokit-editor/*": ["packages/*/src"]
+    }
+  },
+  "include": ["packages/*/src/**/*", "playground/*/src/**/*"]
+}

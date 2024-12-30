@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+.vokit-egine-codemirror {
+  .cm-editor {
+    font-size: var(--ve-cm-font-size);
+
+    &.cm-focused {
+      outline: none;
+    }
+
+    .cm-line {
+      line-height: var(--ve-cm-line-height);
+      padding: 0 12px;
+      word-break: break-all;
+    }
+  }
+}

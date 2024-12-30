@@ -1,0 +1,61 @@
+.ve-scrollbar {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.ve-scrollbar__wrap {
+  height: 100%;
+  overflow: auto;
+}
+.ve-scrollbar__wrap--hidden-default {
+  scrollbar-width: none;
+}
+.ve-scrollbar__wrap--hidden-default::-webkit-scrollbar {
+  display: none;
+}
+.ve-scrollbar__thumb {
+  background-color: var(--ve-scrollbar-bg-color);
+  border-radius: inherit;
+  cursor: pointer;
+  display: block;
+  height: 0;
+  opacity: var(--ve-scrollbar-opacity, 0.3);
+  position: relative;
+  transition: var(--ve-scrollbar-transition-duration) background-color;
+  width: 0;
+}
+.ve-scrollbar__thumb:hover {
+  background-color: var(--ve-scrollbar-hover-bg-color,);
+  opacity: var(--ve-scrollbar-hover-opacity, 0.5);
+}
+.ve-scrollbar__bar {
+  border-radius: 4px;
+  bottom: 2px;
+  position: absolute;
+  right: 2px;
+  z-index: 1;
+}
+.ve-scrollbar__bar.is-vertical {
+  top: 2px;
+  width: 6px;
+}
+.ve-scrollbar__bar.is-vertical > div {
+  width: 100%;
+}
+.ve-scrollbar__bar.is-horizontal {
+  height: 6px;
+  left: 2px;
+}
+.ve-scrollbar__bar.is-horizontal > div {
+  height: 100%;
+}
+.ve-scrollbar-fade-enter-active {
+  transition: opacity 0.34s ease-out;
+}
+.ve-scrollbar-fade-leave-active {
+  transition: opacity 0.12s ease-out;
+}
+.ve-scrollbar-fade-enter-from,
+.ve-scrollbar-fade-leave-active {
+  opacity: 0;
+}
